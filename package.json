@@ -1,10 +1,10 @@
 {
-  "name": "echarts-stat-tickstep",
-  "version": "1.1.5",
-  "description": "a statistical tool for ECharts",
+  "name": "echarts-stat-tofixed",
+  "version": "1.1.1",
+  "description": "fixed some error about toFixed() for echarts-stat",
   "main": "index.js",
   "types": "src/ecStat.d.ts",
-  "author": "Deqing Li <annong035@gmail.com> initialdmg",
+  "author": "Deqing Li <annong035@gmail.com>; Meng Li <limeng1900@gamil.com>",
   "license": "",
   "repository": {
     "type": "git",

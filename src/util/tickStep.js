@@ -23,9 +23,8 @@ define(function (require) {
         else if(error >= Math.sqrt(2)) {
             step1 *= 2;
         }
-        console.log("step1: ", step1)
-        console.log("precision: ", precision)
-        return +((stop >= start ? step1 : -step1).toFixed(precision));
+        var precisionTemp = Math.abs(precision)
+        return +((stop >= start ? step1 : -step1).toFixed(precisionTemp));
 
     };
 

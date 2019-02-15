@@ -1222,7 +1222,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var binsNumber = threshold(values, minValue, maxValue);
 	        var step = tickStep(minValue, maxValue, binsNumber);
 	        var precision = -Math.floor(Math.log(Math.abs(maxValue - minValue) / binsNumber) / Math.LN10);
-	        
+	        precision = Math.abs(precision) //abs precision
 	        // return the xAxis coordinate for each bins, except the end point of the value
 	        var rangeArray = range(
 	                // use function toFixed() to avoid data like '0.700000001'
@@ -1390,9 +1390,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        else if(error >= Math.sqrt(2)) {
 	            step1 *= 2;
 	        }
-	        console.log("step1: ", step1)
-	        console.log("precision: ", precision)
-	        return +((stop >= start ? step1 : -step1).toFixed(precision));
+	        var precisionTemp = Math.abs(precision)
+	        return +((stop >= start ? step1 : -step1).toFixed(precisionTemp));
 
 	    };
 
